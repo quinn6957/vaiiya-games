@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAIIYA Module Centre</title>
+  <style>
+    :root {
+      --primary-color: #111114;
+      --background-color: #F1F2F4;
+      --card-bg: #ffffff;
+      --text-color: #1c1c1e;
+      --border-radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem 2rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      height: 48px;
+      margin: auto;
+      display: block;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      justify-content: center;
+      max-width: 1400px;
+    }
+
+    .game-card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .game-card:hover {
+      transform: scale(1.03);
+    }
+
+    .game-thumbnail {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .game-info {
+      flex-grow: 1;
+    }
+
+    .game-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .game-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .game-link:hover {
+      background-color: #c10c2c;
+    }
+
+    @media (max-width: 1024px) {
+      .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .game-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/vaiiya-logo.png" alt="VAIIYA Logo" class="logo" />
+  </header>
+  <main class="game-grid">
+    <!-- Game Card Example -->
+    <div class="game-card">
+      <img src="images/module_img/module_sonicthehedgehog.png" alt="Sonic The Hedgehog Thumbnail" class="game-thumbnail" />
+      <div class="game-info">
+        <div class="game-title">Sonic The Hedgehog</div>
+        <a href="games/game1/index.html" class="game-link">Play Now</a>
+      </div>
+    </div>
+
+    <!-- Add more game cards below -->
+    <div class="game-card">
+      <img src="images/game2-thumbnail.jpg" alt="Game 2 Thumbnail" class="game-thumbnail" />
+      <div class="game-info">
+        <div class="game-title">Game Title 2</div>
+        <a href="games/game2/index.html" class="game-link">Play Now</a>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+</html>
