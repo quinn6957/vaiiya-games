@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => {
       console.error("Error loading game metadata:", error);
-      grid.innerHTML = "<p>Failed to load games. Please try again later.</p>";
+      grid.innerHTML =
+        "<img style='display: block; margin-left: auto; margin-right: auto;' src='images/ERROR_METADATA.svg' alt='FAILURE TO LOAD GAME METADATA.' />";
     });
 });

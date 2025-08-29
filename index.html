@@ -104,6 +104,47 @@
         grid-template-columns: 1fr;
       }
     }
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #F1F2F4;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: #ED0F35;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -112,7 +153,16 @@
   </header>
   <main class="game-grid">
   </main>
+<footer>
+  <div class="footer-content">
+    <img src="images/VAIIYA_Logo_Dark.svg" alt="VAIIYA Logo" class="footer-logo" />
+    <div class="footer-links">
+      <a href="https://www.rasaka.org/terms" target="_blank">Terms of Use</a>
+      <a href="https://www.rasaka.org/privacy" target="_blank">Privacy Policy</a>
+      <a href="https://www.rasaka.org/vmc_request" target="_blank">Request a Game</a>
+    </div>
+  </div>
+</footer>
   <script src="script.js"></script>
-
 </body>
 </html>
